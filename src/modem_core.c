@@ -25,6 +25,7 @@ void mdm_init(void) {
   mdm_responses[MDM_RESP_CONNECT_12000] =  "CONNECT 12000";
   mdm_responses[MDM_RESP_CONNECT_14400] =  "CONNECT 14400";
   mdm_responses[MDM_RESP_CONNECT_19200] =  "CONNECT 19200";
+  mdm_responses[MDM_RESP_CONNECT_14400] =  "CONNECT 28800";
   mdm_responses[MDM_RESP_CONNECT_38400] =  "CONNECT 38400";
   mdm_responses[MDM_RESP_CONNECT_57600] =  "CONNECT 57600";
   mdm_responses[MDM_RESP_CONNECT_115200] = "CONNECT 115200";
@@ -50,7 +51,11 @@ modem_response get_connect_response(int speed, int level) {
       return MDM_RESP_CONNECT_57600;
     case 38400:
       return MDM_RESP_CONNECT_38400;
+    case 28800:
+      return MDM_RESP_CONNECT_28800;
     case 19200:
+      return MDM_RESP_CONNECT_19200;
+    case 14400:
       return MDM_RESP_CONNECT_19200;
     case 9600:
       return MDM_RESP_CONNECT_9600;
