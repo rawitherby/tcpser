@@ -13,11 +13,11 @@ void mdm_init(void) {
   mdm_responses[MDM_RESP_ERROR] =          "ERROR";
   mdm_responses[MDM_RESP_CONNECT] =        "CONNECT";
   mdm_responses[MDM_RESP_NO_CARRIER] =     "NO CARRIER";
-  mdm_responses[MDM_RESP_CONNECT_1200] =   "CONNECT 1200";
   mdm_responses[MDM_RESP_NO_DIALTONE] =    "NO DIALTONE";
   mdm_responses[MDM_RESP_BUSY] =           "BUSY";
   mdm_responses[MDM_RESP_NO_ANSWER] =      "NO ANSWER";
   mdm_responses[MDM_RESP_CONNECT_0600] =   "CONNECT 0600";
+  mdm_responses[MDM_RESP_CONNECT_1200] =   "CONNECT 1200";
   mdm_responses[MDM_RESP_CONNECT_2400] =   "CONNECT 2400";
   mdm_responses[MDM_RESP_CONNECT_4800] =   "CONNECT 4800";
   mdm_responses[MDM_RESP_CONNECT_9600] =   "CONNECT 9600";
