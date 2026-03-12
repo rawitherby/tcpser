@@ -182,9 +182,13 @@ int ser_set_flow_control(int fd, int status) {
     ELOG(LOG_FATAL, "Could not get serial port attributes");
     return -1;
   }
-  // turn all off.
-  tio.c_cflag &= ~(IXON | IXOFF | CRTSCTS);
-  tio.c_cflag |= status;
+  tio.c_cflag &= ~CRTSCTS;
+  tio.c_iflag &= ~(IXON | IXOFF);
+  if(status == CRTSCTS) {
+    tio.c_cflag |= CRTSCTS;
+  } else if(status == (IXON | IXOFF)) {
+    tio.c_iflag |= IXON | IXOFF;
+  }
   if(0 != tcsetattr(fd, TCSANOW, &tio)) {
     ELOG(LOG_FATAL,"Could not set serial port attributes");
     return -1;
