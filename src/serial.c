@@ -47,11 +47,21 @@ int ser_get_bps_const(int speed) {
       bps_rate = B38400;
       break;
 #endif /* B38400 */
+#if defined (B28800)
+    case 28800:
+      bps_rate = B28800;
+      break;
+#endif /* B28800 */
 #if defined (B19200)
     case 19200:
       bps_rate = B19200;
       break;
 #endif /* B19200 */
+#if defined (B14400)
+    case 14400:
+      bps_rate = B14400;
+      break;
+#endif /* B14400 */
 #if defined (B9600)
     case 9600:
       bps_rate = B9600;
